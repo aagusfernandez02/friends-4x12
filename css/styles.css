@@ -1,0 +1,586 @@
+/* FUENTES */
+
+@font-face {
+    font-family: 'FriendsFont';
+    src: url('/fonts/GabrielWeissFriendsFont.woff2') format('woff2'), url('/fonts/GabrielWeissFriendsFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* INICIO CSS RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', cursive;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+/* FIN CSS RESET */
+
+
+/* INICIO HEADER */
+
+header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #826F66;
+    position: fixed;
+    font-weight: bold;
+    opacity: .95;
+    transition: .25s;
+    z-index: 10000;
+    border-bottom: 1px solid #554843;
+}
+
+header:hover {
+    opacity: 1;
+    transition: .25s;
+}
+
+.header_logo {
+    width: 150px;
+    height: 28px;
+}
+
+.header_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_menu li {
+    position: relative;
+    margin-right: 30px;
+}
+
+
+.header_menu li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -1px;
+    left: 0;
+    border-radius: 50px;
+    background-color: #e73f3f;
+    transform: scaleX(0);
+    transition: transform 0.25s ease-out;
+    transform-origin: bottom right;
+}
+
+.header_menu li:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.separador {
+    height: 100px;
+    background-color: #C69B7B;
+}
+
+
+/* Inicio hamburguer menu */
+
+#navMenu_mobile {
+    display: none;
+}
+
+#navMenu_mobile>span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    border-radius: 9999px;
+    background-color: #000000;
+}
+
+#navMenu_mobile>span:not(:last-child) {
+    margin-bottom: 7px;
+}
+
+#navMenu_mobile,
+#navMenu_mobile>span {
+    transition: all .4s ease-in-out;
+}
+
+#navMenu_mobile.active {
+    transition-delay: .8s;
+    transform: rotate(45deg);
+}
+
+#navMenu_mobile.active>span:nth-child(2) {
+    width: 0;
+}
+
+#navMenu_mobile.active>span:nth-child(1),
+#navMenu_mobile.active>span:nth-child(3) {
+    transition-delay: .4s;
+}
+
+#navMenu_mobile.active>span:nth-child(1) {
+    transform: translateY(9px);
+}
+
+#navMenu_mobile.active>span:nth-child(3) {
+    transform: translateY(-9px) rotate(90deg);
+}
+
+
+/* Fin hamburguer menu */
+
+
+/* FIN HEADER */
+
+
+/* INICIO SIDEBAR */
+
+.hiddenSidebar {
+    right: -30vw;
+}
+
+.shownSidebar {
+    right: 0;
+}
+
+.sideBar {
+    width: 30vw;
+    height: calc(100vh - 100px);
+    float: right;
+    z-index: 1000;
+    position: fixed;
+    top: 100px;
+    background-color: #826F66;
+    opacity: 1;
+    transition: 1s cubic-bezier(.65, 0, .76, .6);
+    border-left: 1px solid #554843;
+}
+
+.sideBar li {
+    list-style: none;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.sideBar li {
+    position: relative;
+}
+
+.sideBar>li:not(:last-child) {
+    margin-right: 30px;
+}
+
+
+/* FIN SIDEBAR */
+
+
+/* INICIO FOOTER */
+
+footer {
+    background-color: #3A3845;
+    color: #ffffff;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.redes {
+    width: 290px;
+    display: flex;
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.derechos {
+    width: 260px;
+    align-self: center;
+}
+
+
+/* FIN FOOTER */
+
+
+/* ==================== INICIO HOME ==================== */
+
+
+/* INICIO MAIN */
+
+.main_heading {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://pyxis.nymag.com/v1/imgs/5ec/86a/85805ca0989b5e005ece21d5d212cc9e55-09-ill-be-there-for-you-lede.rsocial.w1200.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: .5em;
+}
+
+.main_heading h1,
+.main_heading h2 {
+    text-align: center;
+    font-family: 'FriendsFont', 'Brush Script MT', cursive;
+    margin-bottom: 0.5em;
+    color: #F5F5F5;
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+}
+
+main {
+    background-color: #C69B7B;
+}
+
+main h1 {
+    text-align: center;
+    font-family: 'FriendsFont', 'Brush Script MT', cursive;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+}
+
+.main_sinopsis {
+    padding-top: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 5%;
+}
+
+.main_sinopsis img {
+    width: 25%;
+    margin-left: 2%;
+    margin-right: 2%;
+    height: auto;
+    float: left;
+}
+
+.main_sinopsis p {
+    width: 100%;
+    text-align: justify;
+    font-size: larger;
+}
+
+.main_datos {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 8%;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid #554843;
+}
+
+.main_datos h2 {
+    text-decoration: underline;
+}
+
+.main_datos span {
+    font-weight: bold;
+}
+
+.main_datos_row {
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    flex-wrap: wrap;
+}
+
+.main_datos_col {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+
+/* FIN MAIN */
+
+
+/* ==================== FIN HOME ==================== */
+
+
+/* ==================== INICIO CURIOSIDADES ==================== */
+
+.curiosidades {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+    gap: 15px;
+    padding-bottom: 5%;
+    text-align: justify;
+}
+
+.curiosidades section {
+    border: 1px solid #554843;
+    border-radius: 5px;
+    padding: 1%;
+    background-color: #b8967c;
+}
+
+.curiosidades section img {
+    max-height: 120px;
+    border-radius: 5px;
+}
+
+.curiosidades_conImg_izq img {
+    float: left;
+    margin-right: 0.5%;
+}
+
+.curiosidades_conImg_der img {
+    float: right;
+    margin-left: 1%;
+}
+
+
+/* ==================== FIN CURIOSIDADES ==================== */
+
+
+/* ==================== INICIO CRÍTICAS Y OPINIONES ==================== */
+ 
+.criticasOpiniones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.criticasOpiniones section {
+    width: 340px;
+    text-align: justify;
+    padding: 1rem;
+    background-color: #bb9579;
+    box-shadow: 15px 15px 15px -5px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 15px 15px 15px -5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 15px 15px 15px -5px rgba(0,0,0,0.5);}
+
+.criticasOpiniones section a {
+    font-style: italic;
+    color: #707070;
+}
+
+
+/* ==================== FIN CRÍTICAS Y OPINIONES ==================== */
+
+
+/* ==================== INICIO GALERÍA ==================== */
+
+.galeria_container {
+    background-color: rgba(0, 0, 0, .1);
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    min-height: 70vh;
+}
+
+.galeria_container>a>img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    filter: blur(.7px);
+    filter: grayscale(.75);
+    transition: .4s;
+}
+
+.galeria_container>a>img:hover {
+    filter: blur(0);
+    filter: grayscale(0);
+    transform: translateY(-0.2em);
+    transition: .4s;
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ==================== FIN GALERÍA ==================== */
+
+
+/* ==================== INICIO CONTACTO ==================== */
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 5rem;
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid black;
+    gap: 1.5rem;
+}
+
+.form_row input,
+.form_row textarea {
+    background-color: #efefef;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    width: 72vw;
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.form_row input {
+    height: 2rem;
+}
+
+.form_row textarea {
+    resize: none;
+    height: 8rem;
+}
+
+.form_row {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+}
+
+.form_row label {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    opacity: .5;
+    transition: .4s;
+    height: auto;
+}
+
+.form_row input:focus+label,
+.form_row textarea:focus+label {
+    transition: .4s;
+    font-size: small;
+    top: -1rem;
+    left: -.05rem;
+    opacity: 1;
+}
+
+.form_row input:not(:placeholder-shown)+label,
+.form_row textarea:not(:placeholder-shown)+label {
+    top: -1rem;
+    left: -.05rem;
+    font-size: small;
+    opacity: 1;
+}
+
+.contacto form button {
+    margin-top: 1rem;
+    border: none;
+    padding: .5rem 1.5rem;
+    font-size: larger;
+    border-radius: 3px;
+    background-color: #826F66;
+    cursor: pointer;
+}
+
+
+/* ==================== FIN CONTACTO ==================== */
+
+
+/* RESPONSIVE */
+
+@media (max-width:768px) {
+    header {
+        opacity: 1;
+    }
+
+    #navMenu_mobile {
+        display: block;
+    }
+
+    #navMenu_desktop {
+        display: none;
+    }
+
+    main h1 {
+        font-size: x-large;
+    }
+
+    .main_sinopsis {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main_sinopsis img {
+        width: 100%;
+        margin-bottom: 2%;
+    }
+
+    .main_sinopsis p {
+        font-size: medium;
+    }
+
+    .criticasOpiniones section {
+        width: 90%;
+    }
+
+    .contacto {
+        padding-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header_logo {
+        width: 120px;
+        height: 20px;
+    }
+
+    .main_heading {
+        height: 30vh;
+    }
+
+    .main_sinopsis p {
+        font-size: smaller;
+    }
+
+    .main_datos {
+        font-size: small;
+    }
+
+    .curiosidades section p {
+        font-size: small;
+    }
+
+    .curiosidades section img {
+        max-height: 80px;
+    }
+}
