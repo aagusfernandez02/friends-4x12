@@ -1,6 +1,6 @@
 // HAMBURGUER LOGO
-const navMenu = document.querySelector("#navMenu_mobile");
-const sideBar = document.querySelector("#sidebar");
+const navMenu = document.getElementById("navMenu_mobile");
+const sideBar = document.getElementById("sidebar");
 navMenu.addEventListener("click", () => {
     navMenu.classList.toggle("active");
     sideBar.classList.toggle("hiddenSidebar");
