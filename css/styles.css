@@ -72,7 +72,6 @@ header:hover {
     margin-right: 30px;
 }
 
-
 .header_menu li::after {
     content: '';
     position: absolute;
@@ -210,7 +209,6 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-
 }
 
 .derechos {
@@ -362,7 +360,7 @@ main h1 {
 
 
 /* ==================== INICIO CRÍTICAS Y OPINIONES ==================== */
- 
+
 .criticasOpiniones {
     display: flex;
     flex-wrap: wrap;
@@ -379,9 +377,10 @@ main h1 {
     text-align: justify;
     padding: 1rem;
     background-color: #bb9579;
-    box-shadow: 15px 15px 15px -5px rgba(0,0,0,0.5);
-    -webkit-box-shadow: 15px 15px 15px -5px rgba(0,0,0,0.5);
-    -moz-box-shadow: 15px 15px 15px -5px rgba(0,0,0,0.5);}
+    box-shadow: 15px 15px 15px -5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 15px 15px 15px -5px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 15px 15px 15px -5px rgba(0, 0, 0, 0.5);
+}
 
 .criticasOpiniones section a {
     font-style: italic;
@@ -438,13 +437,26 @@ main h1 {
     padding-bottom: 5rem;
 }
 
-.contacto form {
+.contacto_container {
+    display: flex;
+    gap: 3rem;
+    border-bottom: 1px solid #000000;
+}
+
+.contacto_container_col {
+    max-width: 40vw;
+}
+
+.contacto_container_col img {
+    height: 18.5rem;
+}
+
+.contacto_form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-bottom: 2rem;
-    border-bottom: 1px solid black;
     gap: 1.5rem;
 }
 
@@ -454,7 +466,7 @@ main h1 {
     outline: none;
     border: none;
     border-radius: 3px;
-    width: 72vw;
+    width: 35vw;
     padding-left: .5em;
     padding-right: .5em;
     padding-top: .5em;
@@ -503,7 +515,7 @@ main h1 {
     opacity: 1;
 }
 
-.contacto form button {
+.contacto_form button {
     margin-top: 1rem;
     border: none;
     padding: .5rem 1.5rem;
@@ -523,39 +535,38 @@ main h1 {
     header {
         opacity: 1;
     }
-
     #navMenu_mobile {
         display: block;
     }
-
     #navMenu_desktop {
         display: none;
     }
-
     main h1 {
         font-size: x-large;
     }
-
     .main_sinopsis {
         display: flex;
         flex-direction: column;
     }
-
     .main_sinopsis img {
         width: 100%;
         margin-bottom: 2%;
     }
-
     .main_sinopsis p {
         font-size: medium;
     }
-
     .criticasOpiniones section {
         width: 90%;
     }
-
     .contacto {
         padding-bottom: 3rem;
+    }
+    .contacto_img {
+        display: none;
+    }
+    .form_row input,
+    .form_row textarea {
+        width: 60vw;
     }
 }
 
@@ -564,24 +575,23 @@ main h1 {
         width: 120px;
         height: 20px;
     }
-
     .main_heading {
         height: 30vh;
     }
-
     .main_sinopsis p {
         font-size: smaller;
     }
-
     .main_datos {
         font-size: small;
     }
-
     .curiosidades section p {
         font-size: small;
     }
-
     .curiosidades section img {
         max-height: 80px;
+    }
+    .form_row input,
+    .form_row textarea {
+        width: 85vw;
     }
 }

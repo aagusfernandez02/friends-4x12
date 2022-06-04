@@ -54,26 +54,32 @@
     </div>
     <main class="contacto">
         <h1>CONTACTANOS</h1>
-        <form action="#" method="POST">
-            <div class="form_row">
-                <input type="text" id="nombre" name="nombre" placeholder=" ">
-                <label for="nombre">Nombre</label>
-            </div>
-            <div class="form_row">
-                <input type="text" id="apellido" name="apellido" placeholder=" ">
-                <label for="apellido">Apellido</label>
-            </div>
-            <div class="form_row">
-                <input type="email" id="email" name="email" placeholder=" ">
-                <label for="email">Email</label>
-            </div>
-            <div class="form_row">
-                <textarea name="mensaje" id="mensaje" placeholder=" "></textarea>
-                <label for="mensaje">Mensaje</label>
-            </div>
-            <button type="submit">ENVIAR</button>
-        </form>
-        <img src="img/contact_img.png" alt="">
+        <article class="contacto_container">
+            <section class="contacto_container_col">
+                <form action="#" method="POST" class="contacto_form">
+                    <div class="form_row">
+                        <input type="text" id="nombre" name="nombre" placeholder=" ">
+                        <label for="nombre">Nombre</label>
+                    </div>
+                    <div class="form_row">
+                        <input type="text" id="apellido" name="apellido" placeholder=" ">
+                        <label for="apellido">Apellido</label>
+                    </div>
+                    <div class="form_row">
+                        <input type="email" id="email" name="email" placeholder=" ">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form_row">
+                        <textarea name="mensaje" id="mensaje" placeholder=" "></textarea>
+                        <label for="mensaje">Mensaje</label>
+                    </div>
+                    <button type="submit">ENVIAR</button>
+                </form>
+            </section>
+            <section class="contacto_container_col contacto_img">
+                <img src="img/contact.jpg" alt="">
+            </section>
+        </article>
     </main>
     <footer>
         <div class="derechos">® Derechos reservados Agustín Fernandez 2022</div>
