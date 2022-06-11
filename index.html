@@ -29,7 +29,19 @@
                 <li><a href="index.html">INICIO</a></li>
                 <li><a href="galeria.html">GALERIA</a></li>
                 <li><a href="curiosidades.html">CURIOSIDADES</a></li>
-                <li><a href="#">PERSONAJES ▼</a></li>
+                <li id="dropdown_btn">
+                    <span>PERSONAJES</span>
+                    <i id="dropdown_icon" class="fa-solid fa-caret-down dropDown_icon"></i>
+                    <div id="dropdown" class="hidden">
+                        <ul>
+                            <li><a href="#">Ross Geller</a></li>
+                            <li><a href="#">Monica Geller</a></li>
+                            <li><a href="#">Rachel Green</a></li>
+                            <li><a href="#">Joey Tribbiani</a></li>
+                            <li><a href="#">Phoebe Buffay</a></li>
+                        </ul>
+                    </div>
+                </li>
                 <!-- ALT+31 = ▼ -->
                 <li><a href="critiasOpiniones.html">CRITICAS Y OPINIONES</a></li>
                 <li><a href="contacto.html">CONTACTO</a></li>
@@ -44,11 +56,21 @@
     <div class="separador"></div>
     <div id="sidebar" class="sideBar hiddenSidebar">
         <ul>
-
             <li><a href="index.html">INICIO</a></li>
             <li><a href="galeria.html">GALERIA</a></li>
             <li><a href="curiosidades.html">CURIOSIDADES</a></li>
-            <li><a href="#">PERSONAJES ▼</a></li>
+            <li>
+                <p>PERSONAJES</p>
+                <ul>
+                    <li><a href="#">- Ross Geller</a></li>
+                    <li><a href="#">- Monica Geller</a></li>
+                    <li><a href="#">- Rachel Green</a></li>
+                    <li><a href="#">- Joey Tribbiani</a></li>
+                    <li><a href="#">- Phoebe Buffay</a></li>
+                </ul>
+
+            </li>
+
             <!-- ALT+31 = ▼ -->
             <li><a href="critiasOpiniones.html">CRITICAS Y OPINIONES</a></li>
             <li><a href="contacto.html">CONTACTO</a></li>
@@ -99,6 +121,7 @@
 
     <!-- SCRIPTS -->
     <script src="js/hamburguerMenu.js"></script>
+    <script src="js/dropdownButton.js"></script>
 </body>
 
 </html>

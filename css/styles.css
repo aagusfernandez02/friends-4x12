@@ -67,12 +67,12 @@ header:hover {
     align-items: center;
 }
 
-.header_menu li {
+.header_menu>li {
     position: relative;
     margin-right: 30px;
 }
 
-.header_menu li::after {
+.header_menu>li::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -86,7 +86,7 @@ header:hover {
     transform-origin: bottom right;
 }
 
-.header_menu li:hover:after {
+.header_menu>li:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
@@ -95,6 +95,49 @@ header:hover {
     height: 100px;
     background-color: #C69B7B;
 }
+
+
+/* Inicio Dropdown */
+
+.dropDown_icon {
+    transform: rotate(0deg);
+    transition: .35s;
+}
+
+.dropDown_icon_active {
+    transform: rotate(-180deg);
+    transition: .35s;
+}
+
+#dropdown_btn {
+    position: relative;
+}
+
+#dropdown {
+    position: absolute;
+    width: 11vw;
+    background-color: wheat;
+    padding: .3rem;
+    background-color: #947f75;
+    border-bottom: 1px solid #554843;
+    border-left: 1px solid #554843;
+    border-right: 1px solid #554843;
+}
+
+#dropdown>ul>li {
+    margin-bottom: .25rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: block;
+}
+
+
+/* Fin Dropdown */
 
 
 /* Inicio hamburguer menu */
@@ -325,34 +368,56 @@ main h1 {
 
 .curiosidades {
     display: flex;
-    flex-direction: column;
-    margin-left: 10%;
-    margin-right: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
     gap: 1rem;
     padding-bottom: 5%;
     text-align: justify;
 }
 
 .curiosidades section {
-    border: 1px solid #554843;
-    border-radius: 5px;
-    padding: 1%;
-    background-color: #b8967c;
+    width: 35vw;
+    height: 40vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #f1f1f1;
+    padding: .5rem;
+    font-size: small;
+    text-align: start;
 }
 
 .curiosidades section img {
-    max-height: 120px;
-    border-radius: 5px;
-}
-
-.curiosidades_conImg_izq img {
+    height: auto;
+    max-height: 60%;
+    max-width: 60%;
+    object-fit: cover;
     float: left;
-    margin-right: 0.5%;
+    margin-right: .25rem;
+    margin-bottom: .1rem;
 }
 
-.curiosidades_conImg_der img {
-    float: right;
-    margin-left: 1%;
+.actual {
+    z-index: 500;
+    box-shadow: 0px 8px 10px 5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 8px 10px 5px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 8px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.prev {
+    z-index: 450;
+    transform: translateX(25%) translateY(5%);
+}
+
+.next {
+    z-index: 450;
+    transform: translateX(-25%) translateY(5%);
+}
+
+.button_movement {
+    font-size: 3em;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
 }
 
 
@@ -594,8 +659,19 @@ main h1 {
     .main_sinopsis p {
         font-size: medium;
     }
-    .criticasOpiniones section {
-        width: 90%;
+    .curiosidades {
+        padding: 0.5rem;
+        padding-bottom: 2rem;
+    }
+    .curiosidades section {
+        width: 90vw;
+        padding: .5rem;
+    }
+    .prev {
+        display: none;
+    }
+    .next {
+        display: none;
     }
     .contacto {
         padding-bottom: 3rem;
@@ -623,11 +699,11 @@ main h1 {
     .main_datos {
         font-size: small;
     }
-    .curiosidades section p {
-        font-size: small;
-    }
     .curiosidades section img {
-        max-height: 80px;
+        display: block;
+        max-height: 60%;
+        max-width: 100%;
+        width: 100%;
     }
     .form_row input,
     .form_row textarea {
