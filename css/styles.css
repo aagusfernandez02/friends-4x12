@@ -29,6 +29,7 @@ ol {
 }
 
 
+
 /* FIN CSS RESET */
 
 
@@ -45,15 +46,8 @@ header {
     background-color: #826F66;
     position: fixed;
     font-weight: bold;
-    opacity: .95;
-    transition: .25s;
     z-index: 10000;
     border-bottom: 1px solid #554843;
-}
-
-header:hover {
-    opacity: 1;
-    transition: .25s;
 }
 
 .header_logo {
@@ -95,6 +89,7 @@ header:hover {
     height: 100px;
     background-color: #C69B7B;
 }
+
 
 
 /* Inicio Dropdown */
@@ -373,6 +368,7 @@ main h1 {
     gap: 1rem;
     padding-bottom: 5%;
     text-align: justify;
+    min-height: 60vh;
 }
 
 .curiosidades section {
@@ -636,9 +632,6 @@ main h1 {
 /* RESPONSIVE */
 
 @media (max-width:768px) {
-    header {
-        opacity: 1;
-    }
     #navMenu_mobile {
         display: block;
     }
@@ -660,12 +653,22 @@ main h1 {
         font-size: medium;
     }
     .curiosidades {
+        height: auto;
         padding: 0.5rem;
         padding-bottom: 2rem;
+        justify-content: center;
+        align-items: center;
     }
     .curiosidades section {
         width: 90vw;
+        max-height: 50vh;
+        height: auto;
         padding: .5rem;
+    }
+    .curiosidades section img {
+        max-width: 75%;
+        width: 75%;
+        max-height: 40vh;
     }
     .prev {
         display: none;
@@ -699,15 +702,16 @@ main h1 {
     .main_datos {
         font-size: small;
     }
-    .curiosidades section img {
-        display: block;
-        max-height: 60%;
-        max-width: 100%;
-        width: 100%;
-    }
+
     .form_row input,
     .form_row textarea {
         width: 85vw;
+    }
+    .curiosidades section img {
+        display: block;
+        max-width: 100%;
+        max-height: 50vw;
+        width: 100%;
     }
     .galeria_container {
         display: flex;
@@ -718,5 +722,8 @@ main h1 {
     .galeria_container img {
         filter: blur(0);
         filter: grayscale(0);
+    }
+    .footer{
+        padding: 1rem;
     }
 }
