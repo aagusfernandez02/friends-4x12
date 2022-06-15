@@ -29,7 +29,6 @@ ol {
 }
 
 
-
 /* FIN CSS RESET */
 
 
@@ -89,7 +88,6 @@ header {
     height: 100px;
     background-color: #C69B7B;
 }
-
 
 
 /* Inicio Dropdown */
@@ -629,6 +627,47 @@ main h1 {
 /* ==================== FIN CONTACTO ==================== */
 
 
+/* ==================== INICIO PERSONAJES ==================== */
+
+.personajes {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+    overflow: hidden;
+}
+
+.personajes a {
+    color: rgb(26, 26, 148);
+    text-decoration: underline;
+}
+
+.personajes_descripcion {
+    max-width: 50%;
+}
+
+.personajes_estadisticas {
+    max-width: 50%;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: .5rem;
+    border-radius: 5px;
+    height: fit-content;
+}
+
+.personajes_estadisticas img {
+    max-width: 100%;
+}
+
+.personajes_estadisticas li {
+    margin-left: 2rem;
+    list-style-type: disc;
+}
+
+
+/* ==================== FIN PERSONAJES ==================== */
+
+
 /* RESPONSIVE */
 
 @media (max-width:768px) {
@@ -686,6 +725,9 @@ main h1 {
     .form_row textarea {
         width: 60vw;
     }
+    .personajes_estadisticas {
+        max-width: 30%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -702,7 +744,6 @@ main h1 {
     .main_datos {
         font-size: small;
     }
-
     .form_row input,
     .form_row textarea {
         width: 85vw;
@@ -723,7 +764,25 @@ main h1 {
         filter: blur(0);
         filter: grayscale(0);
     }
-    .footer{
+    .footer {
         padding: 1rem;
+    }
+    .personajes {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    .personajes_descripcion {
+        max-width: 90%;
+    }
+    .personajes_estadisticas {
+        max-width: 90%;
+        display: flex;
+        gap: 1rem;
+    }
+    .personajes_estadisticas img {
+        max-width: 60%;
+        object-fit: cover;
     }
 }
