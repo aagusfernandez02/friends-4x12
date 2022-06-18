@@ -785,4 +785,11 @@ main h1 {
         max-width: 60%;
         object-fit: cover;
     }
+    #sidebar{
+        font-size: smaller;
+        width: 50vw;
+    }
+    .hiddenSidebar {
+        right: -50vw;
+    }
 }
