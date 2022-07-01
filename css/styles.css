@@ -716,6 +716,17 @@ main h1 {
     .personajes_estadisticas {
         max-width: 30%;
     }
+    footer {
+        flex-direction: column;
+    }
+    .derechos {
+        align-self: flex-start;
+        margin-left: 1rem;
+    }
+    .redes {
+        align-self: flex-end;
+        margin-right: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -752,9 +763,6 @@ main h1 {
         filter: blur(0);
         filter: grayscale(0);
     }
-    .footer {
-        padding: 1rem;
-    }
     .personajes {
         flex-direction: column-reverse;
         justify-content: center;
@@ -779,5 +787,11 @@ main h1 {
     }
     .hiddenSidebar {
         right: -50vw;
+    }
+    .derechos {
+        align-self: center;
+    }
+    .redes {
+        align-self: center;
     }
 }
